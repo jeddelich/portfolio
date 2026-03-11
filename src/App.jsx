@@ -5,7 +5,7 @@ import Navbar from './components/layout/Navbar'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
-import { Footer } from './components/layout/Footer'
+import Footer from './components/layout/Footer'
 
 function App() {
 
