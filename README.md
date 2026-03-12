@@ -1,16 +1,82 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Personal Portfolio Website
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?logo=vite)
+![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** https://portfolio-jed-delichs-projects.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern, responsive portfolio website built to showcase my projects, skills, and experience as a software engineer.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+* Responsive design for desktop, tablets, and mobile devices
+* Interactive project showcase
+* Smooth navigation and UI animations
+* Contact form for reaching out to me
+* Clean, strategic component structuring
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+* **Frontend:** React
+* **Styling:** CSS / Styled Components
+* **Build Tool:** Vite
+* **Deployment:** Vercel
+
+---
+
+## Project Structure
+
+```
+src/
+ ├─ components/
+ │   ├─ Navbar.jsx
+ │   ├─ Hero.jsx
+ │   ├─ Projects.jsx
+ │   └─ Footer.jsx
+ │
+ ├─ pages/
+ │   └─ Home.jsx
+ │
+ ├─ styles/
+ ├─ assets/
+ └─ App.jsx
+```
+
+---
+
+## Screenshots
+
+*Will add good screenshots of my website here when its done*
+
+---
+
+## Architecture Decisions
+
+This project uses React
+with a component-based architecture to keep the UI modular and reusable.
+The layout is separated into small components (Navbar, Hero, Projects, Footer) to make the codebase easier to maintain and extend.
+
+Styling is handled using a centralized theme and reusable variables to ensure consistent colors and spacing across the site.
+
+---
+
+## Future Improvements
+
+* Add blog functionality
+* Implement dark/light theme toggle
+* Improve animations and micro-interactions
+* Add CMS integration for project content
+
+---
+
+## Author
+
+**Jed Delich**
+
+GitHub: https://github.com/jeddelich
