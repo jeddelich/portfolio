@@ -13,7 +13,7 @@ function Navbar() {
     <header className="site-header">
       <nav className="site-nav" aria-label="Main navigation">
         <Link className="brand" to="/" onClick={closeMenu}>
-          Jed Delich
+          JD
         </Link>
 
         <button
