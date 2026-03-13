@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { theme } from "@/styles/theme";
 import { techStack } from "@/data/techStack";
+import { socials } from "@/data/socials";
 import "./Hero.css";
 
 function Hero() {
@@ -21,9 +22,30 @@ function Hero() {
         I build modern web applications with React, clean
           visual systems, and an emphasis on usability.
         </p>
-        <Link className="hero__button" to="/projects">
-          View My Projects
-        </Link>
+        <div className="hero__actions">
+          <Link className="hero__button" to="/projects">
+            View My Projects
+          </Link>
+          <div className="hero__socials" aria-label="Social links">
+            {socials.map((social) => (
+              <a
+                key={social.name}
+                className="hero__social-link"
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={social.name}
+              >
+                <img
+                  className={`hero__social-icon${social.name === "Resume" ? " hero__social-icon--resume" : ""}`}
+                  src={social.icon}
+                  alt={social.name}
+                  loading="lazy"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="hero__media" aria-label="Tech stack icons">
