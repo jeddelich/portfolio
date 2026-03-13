@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import "./Navbar.css"
 
-function Navbar() {
+function Navbar({ onContactOpen }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const closeMenu = () => {
@@ -31,7 +31,14 @@ function Navbar() {
         <div className={`nav-links ${isOpen ? "is-open" : ""}`}>
           <Link className="nav-link" style={{ "--stagger": 0 }} to="/" onClick={closeMenu}>Home</Link>
           <Link className="nav-link" style={{ "--stagger": 1 }} to="/projects" onClick={closeMenu}>Projects</Link>
-          <Link className="nav-link" style={{ "--stagger": 2 }} to="/contact" onClick={closeMenu}>Contact</Link>
+          <button
+            className="nav-link"
+            style={{ "--stagger": 2 }}
+            type="button"
+            onClick={() => { closeMenu(); onContactOpen() }}
+          >
+            Contact
+          </button>
         </div>
       </nav>
     </header>

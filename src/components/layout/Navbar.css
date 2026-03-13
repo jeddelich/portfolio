@@ -37,7 +37,7 @@
   gap: clamp(0.5rem, 1vw, 0.75rem);
 }
 
-.nav-links a {
+.nav-link {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -45,26 +45,28 @@
   min-width: 6.5rem;
   padding: 0.5rem 0.75rem;
   opacity: 0;
+  border: none;
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--color-text);
   background: color-mix(in srgb, var(--color-surface) 76%, transparent);
+  cursor: pointer;
   transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
   animation: smallSlideInFromLeft 750ms ease forwards;
   animation-delay: calc((var(--stagger, 0) * 250ms) + 500ms);
 }
 
-.nav-links a:hover,
-.nav-links a:focus-visible {
+.nav-link:hover,
+.nav-link:focus-visible {
   background: var(--color-primary);
   color: var(--color-surface);
   transform: translateY(-1px);
   outline: none;
 }
 
-.nav-links a:active {
+.nav-link:active {
   background: var(--color-secondary);
   color: var(--color-surface);
 }
@@ -89,7 +91,7 @@
 }
 
 @media (max-width: 900px) {
-  .nav-links a {
+  .nav-link {
     min-width: 5.75rem;
   }
 }
@@ -124,7 +126,7 @@
     border-color: color-mix(in srgb, var(--color-muted) 25%, transparent);
   }
 
-  .nav-links a {
+  .nav-link {
     width: 100%;
     justify-content: flex-start;
     border-radius: 0.75rem;
@@ -132,7 +134,7 @@
     animation: none;
   }
 
-  .nav-links.is-open a {
+  .nav-links.is-open .nav-link {
     animation: smallSlideInFromLeft 350ms ease forwards;
     animation-delay: calc(var(--stagger, 0) * 90ms);
   }
@@ -140,7 +142,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .nav-links,
-  .nav-links a {
+  .nav-link {
     transition: none;
     animation: none;
   }
