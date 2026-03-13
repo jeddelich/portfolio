@@ -104,11 +104,6 @@
   object-fit: contain;
 }
 
-.hero__social-icon--resume {
-  width: 1.75rem;
-  height: 1.75rem;
-}
-
 .hero__media {
   display: flex;
   align-items: stretch;

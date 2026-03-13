@@ -27,23 +27,27 @@ function Hero() {
             View My Projects
           </Link>
           <div className="hero__socials" aria-label="Social links">
-            {socials.map((social) => (
-              <a
-                key={social.name}
-                className="hero__social-link"
-                href={social.link}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={social.name}
-              >
-                <img
-                  className={`hero__social-icon${social.name === "Resume" ? " hero__social-icon--resume" : ""}`}
-                  src={social.icon}
-                  alt={social.name}
-                  loading="lazy"
-                />
-              </a>
-            ))}
+            {socials.map((social) => {
+              const Icon = social.icon;
+
+              return (
+                <a
+                  key={social.name}
+                  className="hero__social-link"
+                  href={social.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={social.name}
+                >
+                  <Icon
+                    className={`hero__social-icon${social.iconClassName ? ` ${social.iconClassName}` : ""}`}
+                    style={{ color: social.color }}
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

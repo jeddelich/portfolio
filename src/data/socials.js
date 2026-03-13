@@ -1,17 +1,24 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaRegFilePdf } from "react-icons/fa6";
+
 export const socials = [
   {
     name: "LinkedIn",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+    icon: FaLinkedin,
+    color: "#0a66c2",
     link: "https://www.linkedin.com/in/jed-delich/",
   },
   {
     name: "GitHub",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    icon: FaGithub,
+    color: "#111827",
     link: "https://github.com/jeddelich",
   },
   {
     name: "Resume",
-    icon: "https://api.iconify.design/mdi:file-pdf-box.svg?color=%236b7280",
+    icon: FaRegFilePdf,
+    color: "#e07a5f",
+    iconClassName: "hero__social-icon--resume",
     link: "https://example.com/resume.pdf",
   },
 ];
